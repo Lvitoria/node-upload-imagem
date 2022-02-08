@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Documentation Upload",
+    "description": "This is an API",
+    "version": "1.0.0",
+    "contact": { "email": "lucasvitoriaalves@hotmail.com" }
+  },
+  "paths": {
+    "/upload": {
+      "post": {
+        "tags": ["upload"],
+        "summary": "Upload imagen",
+        "description": "Upload imagen",
+        "requestBody": {
+          "content": {
+            "image/png": {
+              "schema": {
+                "type": "string",
+                "properties": {
+                  "file": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "file": ""
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+              "fieldname": "file",
+              "originalname": "4. Conhecendo o conceito de stream.mp4",
+              "encoding": "7bit",
+              "mimetype": "video/mp4",
+              "destination": "./tmp",
+              "filename": "9b6d64c9b58ed634f181aef24b6d0f5e",
+              "path": "tmp/9b6d64c9b58ed634f181aef24b6d0f5e",
+              "size": 144600031
+          }
+        }
+      }
+    }
+  }
+}
